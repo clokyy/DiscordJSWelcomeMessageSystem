@@ -6,15 +6,15 @@ bot.on('guildMemberAdd', member => {
     }
 
     let WelcomeUserEmbed = new Discord.MessageEmbed()
-        .setAuthor('AstroDevelopment Bot', 'https://cdn.discordapp.com/attachments/723965594927628298/793589359356936192/Untitled-1.png')
-        .setTitle(`Welcome **${member.user.tag}** to **AstroDevelopment**`)
+        .setAuthor('{DISCORD_SERVER_NAME} Bot', '{DISCORD_SERVER_ICON}')
+        .setTitle(`Welcome **${member.user.tag}** to **{DISCORD_SERVER_NAME}**`)
         .setColor('#4B0082')
         .addField('Total Members', `${member.guild.memberCount}`)
-        .setThumbnail('https://cdn.discordapp.com/attachments/723965594927628298/793589359356936192/Untitled-1.png')
+        .setThumbnail('{DISCORD_SERVER_ICON}')
         .addField('Date Joined', new Date())
-        .addField('Website', 'http://astrodevelop.com/')
+        .addField('Website', '{DISCORD_SERVER_WEBSITE}')
         .addField('Website Status', ':x: down for maintenance!')
-        .setFooter('AstroDevelopment Staff Team')
+        .setFooter('{DISCORD_SERVER_NAME} Staff Team')
 
     welcomechannel.send(WelcomeUserEmbed);  
     member.roles.add('723953994157785108');
